@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      #nav {
+        display: grid;
+        align-items: center;
+        border: 1px solid blue;
+        height: 60px;
+        width: 100%;
+        background-color: #257cff;
+      }
+      .menu {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+      .menu a {
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+      }
+      #logo {
+        width: 8%;
+      }
+      #logo img {
+        width: 100%;
+      }
+      #playstore,
+      #Appstore {
+        /* border: 1px solid black; */
+        width: 20%;
+        height: 50px;
+        border-radius: 5px;
+        position: absolute;
+      }
+      #playstore img,
+      #Appstore img {
+        width: 100%;
+      }
+      #playstore {
+        top: 400px;
+        left: 100px;
+      }
+      #Appstore {
+        top: 480px;
+        left: 100px;
+      }
+      #icons {
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 10%;
+        height: 30px;
+        position: absolute;
+        left: 120px;
+        top: 580px;
+      }
+      #icons div {
+        /* border: 1px solid red; */
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+      }
+      #icons div img {
+        width: 100%;
+      }
+      #signup{
+        border-radius: 5px;
+        height: 30px;
+        width: 10%;
+        background-color: white;
+        text-align: center;
+        /* color:blue; */
+       padding: 5px;
+      }
+      #signup a{
+        color: blue;
+        font-size: 15px;
+
+      }
+      #signup :hover{
+        background-color: #257cff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <div class="menu">
+        <div id="logo">
+          <a href="#"
+            ><img
+              src="https://www.jefit.com/wp/wp-content/uploads/2017/07/cropped-logo_155_40_white.webp"
+              alt=""
+          /></a>
+        </div>
+        <div><a href="#">Get App</a></div>
+        <div><a href="#">Workout Plans</a></div>
+        <div><a href="#">Exercises</a></div>
+        <div><a href="#">Community</a></div>
+        <div><a href="#">Coach</a></div>
+        <div><a href="#">Elite</a></div>
+        <div><a href="#">Login</a></div>
+        <div id="signup"><a href="#">Sign Up</a></div>
+      </div>
+    </div>
+    <div>
+      <img src="./img1.jpg" alt="" />
+    </div>
+    <div id="playstore">
+      <a
+        href="https://play.google.com/store/apps/details?id=je.fit&referrer=utm_source%3Demail"
+        ><img src="./images/googleplay.png" alt=""
+      /></a>
+    </div>
+    <div id="Appstore">
+      <a
+        href="https://itunes.apple.com/app/apple-store/id449810000?pt=516380&ct=Email&mt=8"
+        ><img src="./images/appstore.png" alt=""
+      /></a>
+    </div>
+    <div id="icons">
+      <div>
+        <a href="https://www.instagram.com/jefitapp/"
+          ><img src="./images/instagram.png" alt=""
+        /></a>
+      </div>
+      <div>
+        <a href="https://www.facebook.com/jefitapp/"
+          ><img src="./images/facebook.png" alt=""
+        /></a>
+      </div>
+      <div>
+        <a href="https://twitter.com/jefitinc"
+          ><img src="./images/twitter.png" alt=""
+        /></a>
+      </div>
+    </div>
+  </body>
+</html>
