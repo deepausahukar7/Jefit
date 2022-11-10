@@ -4,9 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>Document</title>
     <style>
-      *{
+      * {
         margin: 0px;
         box-sizing: border-box;
       }
@@ -74,22 +81,73 @@
       #icons div img {
         width: 100%;
       }
-      #signup{
+      #signup {
         border-radius: 5px;
         height: 30px;
         width: 10%;
         background-color: white;
         text-align: center;
         /* color:blue; */
-       padding: 5px;
+        padding: 5px;
       }
-      #signup a{
+      #signup a {
         color: blue;
         font-size: 15px;
-
       }
-      #signup :hover{
+      #signup :hover {
         background-color: #257cff;
+      }
+      .connect {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bolder;
+        margin-bottom: 20px;
+      }
+      .para {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      #bot {
+        border: 1px solid blue;
+        height: 50px;
+        width: 40%;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* text-align: center; */
+        padding: 10px 40px;
+        background-color: white;
+        color: blue;
+        font-size: medium;
+        font-weight: bold;
+      }
+      #act {
+        border: 1px solid blue;
+        height: 50px;
+        width: 30%;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        font-size: medium;
+        font-weight: bold;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 40px;
+        background-color: blue;
+        color: white;
+      }
+      #act:hover {
+        background-color: white;
+        color: blue;
+      }
+      #solution {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
       }
     </style>
   </head>
@@ -145,5 +203,112 @@
         /></a>
       </div>
     </div>
+    <h1 class="connect">CONNECT WITH OVER 10 MILLION JEFIT MEMBERS</h1>
+    <h4 class="para">
+      As the most active workout community, we invite you and your friends to
+      join us and support each other.
+    </h4>
+    <!--Item slider text-->
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <div
+            class="carousel multi-item-carousel slide"
+            id="myCarousel"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="col-xs-12 col-sm-6 col-md-2">
+                  <a href="#"
+                    ><img
+                      src="https://www.jefit.com/wp/wp-content/uploads/2021/11/16members-150x150.png.webp"
+                      class="img-responsive center-block"
+                  /></a>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-2">
+                  <a href="#"
+                    ><img
+                      src="https://www.jefit.com/wp/wp-content/uploads/2021/11/3members-150x150.png.webp"
+                      class="img-responsive center-block"
+                  /></a>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-2">
+                  <a href="#"
+                    ><img
+                      src="https://www.jefit.com/wp/wp-content/uploads/2021/11/5members-150x150.png.webp"
+                      class="img-responsive center-block"
+                  /></a>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-2">
+                  <a href="#"
+                    ><img
+                      src="https://www.jefit.com/wp/wp-content/uploads/2021/11/10members-150x150.png.webp"
+                      class="img-responsive center-block"
+                  /></a>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-2">
+                  <a href="#"
+                    ><img
+                      src="https://www.jefit.com/wp/wp-content/uploads/2021/11/18members-150x150.png.webp"
+                      class="img-responsive center-block"
+                  /></a>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-2">
+                  <a href="#"
+                    ><img
+                      src="https://www.jefit.com/wp/wp-content/uploads/2021/11/14members-150x150.png.webp"
+                      class="img-responsive center-block"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="solution">
+      <div id="bot">TRENDING TOPICS</div>
+      <div id="act">JOIN NOW</div>
+    </div>
   </body>
 </html>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#myCarousel").carousel({ interval: 3000 });
+
+    $(".multi-item-carousel .item").each(function () {
+      var itemToClone = $(this);
+
+      for (var i = 1; i < 6; i++) {
+        itemToClone = itemToClone.next();
+
+        if (!itemToClone.length) {
+          itemToClone = $(this).siblings(":first");
+        }
+
+        itemToClone
+          .children(":first-child")
+          .clone()
+          .addClass("cloneditem-" + i)
+          .appendTo($(this));
+      }
+    });
+  });
+</script>
