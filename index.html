@@ -149,12 +149,121 @@
         justify-content: space-around;
         margin-top: 50px;
       }
-      .midup{
+      .midup {
         text-align: center;
         font-size: 30px;
         font-weight: bolder;
         margin-top: 90px;
         margin-bottom: 50px;
+      }
+      .top {
+        /* border: 1px solid blue; */
+        display: flex;
+        width: 90%;
+        margin: auto;
+      }
+      #imageDiv {
+        width: 70%;
+      }
+      #imageDiv > img {
+        width: 100%;
+      }
+      #size {
+        text-align: left;
+        font-weight: bold;
+        width: 60%;
+      }
+
+      .mid {
+        /* border: 1px solid blue; */
+        display: flex;
+        width: 90%;
+        margin: auto;
+      }
+
+      .bottom {
+        display: flex;
+        width: 90%;
+        margin: auto;
+      }
+      .midline {
+        text-align: center;
+        font-weight: bolder;
+      }
+      .info {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        justify-content: space-between;
+      }
+      #box {
+        width: 33%;
+        background-color: rgb(30, 29, 29);
+        color: white;
+        text-align: center;
+        box-shadow: rgba(67, 67, 67, 0.24) 0px 3px 8px;
+      }
+      .par {
+        font-weight: bold;
+        margin-bottom: 50px;
+      }
+      .join {
+        border: 1px solid #257cff;
+        height: 50px;
+        width: 45%;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        font-size: medium;
+        font-weight: bold;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 40px;
+        background-color: #257cff;
+        color: white;
+      }
+      .join:hover {
+        background-color: white;
+        color: #257cff;
+      }
+      .lastbox {
+        border: 1px solid #257cff;
+        height: 50px;
+        width: 55%;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        font-size: small;
+        font-weight: bold;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 40px;
+        background-color: #257cff;
+        color: white;
+        margin: auto;
+      }
+      .lastbox:hover {
+        background-color: white;
+        color: #257cff;
+      }
+      .last{
+        text-align: center;
+        font-size: 40px;
+        font-weight: bolder;
+      }
+      .least{
+        text-align: center;
+        font-size: medium;
+        margin-bottom: 20px;
+      }
+      #end{
+        margin-top: 80px;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
       }
     </style>
   </head>
@@ -174,8 +283,8 @@
         <div><a href="#">Community</a></div>
         <div><a href="#">Coach</a></div>
         <div><a href="#">Elite</a></div>
-        <div><a href="#">Login</a></div>
-        <div id="signup"><a href="#">Sign Up</a></div>
+        <div><a href="./login.html">Login</a></div>
+        <div id="signup"><a href="./signup.html">Sign Up</a></div>
       </div>
     </div>
     <div>
@@ -292,9 +401,152 @@
     </div>
     <div id="solution">
       <div id="bot">TRENDING TOPICS</div>
-      <div id="act">JOIN NOW</div>
+      <div class="join">JOIN NOW</div>
     </div>
     <h1 class="midup">JEFIT COVERS ALL OF YOUR WORKOUT NEEDS</h1>
+    <div class="container">
+      <div class="top">
+        <!-- This is the top part. Here should be 2 divs(flex) and inside the second div there should be 6 more divs(Grid) -->
+        <div id="imageDiv">
+          <img
+            src="https://www.jefit.com/wp/wp-content/uploads/2022/08/web1.png"
+            alt=""
+          />
+        </div>
+        <div id="size">
+          <h3 class="tag">WORKOUT TRACKING</h3>
+          <h1 class="par">PERSONALIZE YOUR WORKOUT PLANS</h1>
+          <h2>1400+ exercises with instructions</h2>
+          <h2>Pro-designed workout plans</h2>
+          <h2>Support custom exercises</h2>
+          <h2>Flexible workout planning tool</h2>
+          <div class="join">JOIN NOW</div>
+        </div>
+      </div>
+      <div class="mid">
+        <!-- This is the mid part. Here you should have div where there will be 3 more divs(flex)  -->
+        <div id="size">
+          <h3 class="tag">SMART WATCH INTEGRATION</h3>
+          <h1 class="par">TRAIN & LOG SEAMLESSLY IN GYM AND HOME</h1>
+          <h2 id="pro">Log training with one-click</h2>
+          <h2 id="pro">Control rest time easily</h2>
+          <h2 id="pro">Available on mobile and watch</h2>
+          <h2 id="pro">Audio and video instructions</h2>
+          <div class="join">JOIN NOW</div>
+        </div>
+        <div id="imageDiv">
+          <img
+            src="https://www.jefit.com/wp/wp-content/uploads/2022/08/web2.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="bottom">
+        <!-- This is the bottom part. Here you should have div where there will be 6 more divs(Grid)  -->
+        <div id="imageDiv">
+          <img
+            src="https://www.jefit.com/wp/wp-content/uploads/2022/08/web3.png"
+            alt=""
+          />
+        </div>
+        <div id="size">
+          <h3 class="tag">PROGRESS TRACKING</h3>
+          <h1 class="par">VIEW PROGRESS & REACH NEW LIMITS</h1>
+          <h2 id="pro">Track workout time and weightlifting</h2>
+          <h2 id="pro">Set target muscles and body measurements</h2>
+          <h2 id="pro">Understand muscle recovery rate</h2>
+          <h2 id="pro">Set 1RM goals and refresh records</h2>
+          <div class="join">JOIN NOW</div>
+        </div>
+      </div>
+      <h1 class="midline">PLANS THAT SUIT YOU BEST</h1>
+      <div class="info">
+        <div id="box">
+          <h1>FREE</h1>
+          <h3>Basic</h3>
+          <h3>Ads supported</h3>
+          <h3>Flexible workout planner</h3>
+          <h3>Top-notch log tracker</h3>
+          <h3>1400+ exercises library</h3>
+          <h3>Body stats tracking</h3>
+          <h3>tools</h3>
+          <h3>Support interval training</h3>
+          <button style="width: 65%" class="lastbox">FREE DOWNLOAD</button>
+        </div>
+        <div id="box">
+          <h1>Elite Monthly</h1>
+          <h3>$12.99/month</h3>
+          <h3>All BASIC plan features</h3>
+          <h3>No ads</h3>
+          <h3>Comprehensive training</h3>
+          <h3>reports</h3>
+          <h3>Advanced tracking</h3>
+          <h3>features</h3>
+          <h3>Compare records with</h3>
+          <h3>friends</h3>
+          <h3>Exercise tips from JEFIT</h3>
+          <h3>experts</h3>
+          <h3>Premium workout plans</h3>
+          <h3>More...</h3>
+          <div class="lastbox">LEARN MORE</div>
+          <h3>$12.99 billed / month</h3>
+        </div>
+        <div id="box">
+          <h1>Elite Yearly</h1>
+          <h3>$5.83/month</h3>
+          <h3>All BASIC plan features</h3>
+          <h3>No ads</h3>
+          <h3>Comprehensive training</h3>
+          <h3>reports</h3>
+          <h3>Advanced tracking</h3>
+          <h3>features</h3>
+          <h3>Compare records with</h3>
+          <h3>friends</h3>
+          <h3>Exercise tips from JEFIT</h3>
+          <h3>experts</h3>
+          <h3>Premium workout plans</h3>
+          <h3>More...</h3>
+          <button class="lastbox">LEARN MORE</button>
+          <h3>Save 55%, $69.99 billed / year</h3>
+        </div>
+      </div>
+    </div>
+    <h1 class="last">WANT TO BUILD YOUR OWN WORKOUT PLAN?</h1>
+    <p class="least">
+      Customize your workout plan with over 3000 free exercises in Jefit Workout
+      Plan Builder. And easily share with friends.
+    </p>
+    <div class="lastbox">CREATE WORKOUT PLAN</div>
+    <div id="end">
+      <div id="size">
+        <h1>Products</h1>
+        <p>Elite Membership</p>
+        <p>Coach</p>
+        <p>Signup</p>
+        <p>Login</p>
+      </div>
+      <div id="size">
+        <h1>Resource</h1>
+        <p>Workout Plans</p>
+        <p>Exercises Database</p>
+        <p>Community</p>
+        <p>Help Center</p>
+      </div>
+      <div id="size">
+        <h1>Legal Press</h1>
+        <p>Privacy Policy</p>
+        <p>Term Of use</p>
+        <p>IP / DMCA Notices</p>
+        <p>Press & Media</p>
+      </div>
+      <div id="size">
+        <h1>Follow US</h1>
+       <p>Blog</p>
+       <p>Facebook</p>
+       <p>Twitter</p>
+       <p>Instagram</p>
+      </div>
+    </div>
   </body>
 </html>
 <script type="text/javascript">
@@ -319,4 +571,5 @@
       }
     });
   });
+
 </script>

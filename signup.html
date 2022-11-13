@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0%;
+      }
+      body {
+        background-color: #ebf7ff;
+      }
+      .center {
+        text-align: center;
+        margin-top: 30px;
+        /* margin-bottom: 20px; */
+      }
+      #signup {
+        /* border: 1px solid black; */
+        border-radius: 10px;
+        width: 40%;
+        height: 750px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin: auto;
+        padding: 30px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: #ebf7ff;
+        position: absolute;
+        top: 150px;
+        right: 370px;
+      }
+      #social {
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 55%;
+        margin: auto;
+      }
+      input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .imgdiv {
+        /* border: 1px solid red; */
+        border-radius: 5px;
+        width: 30%;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px;
+        background-color: white;
+      }
+      .imgdiv img {
+        width: 40px;
+        height: 40px;
+      }
+      #act {
+        /* border: 1px solid #257cff; */
+        height: 30px;
+        width: 80%;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        font-size: small;
+        font-weight: bold;
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+        padding: 10px 40px;
+        background-color: #257cff;
+        color: white;
+        margin-top: 20px;
+      }
+      #act:hover {
+        background-color: white;
+        color: #257cff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="signup">
+      <h1 class="center">CREATE ACCOUNT</h1>
+      <p class="center">Continue with</p>
+      <div id="social">
+        <div class="imgdiv">
+          <img src="./images/rg_google.svg" alt="" />
+        </div>
+        <div class="imgdiv">
+          <img src="./images/rg_fb.svg" alt="" />
+        </div>
+        <div class="imgdiv">
+          <img src="./images/rg_apple.svg" alt="" />
+        </div>
+      </div>
+      <p class="center">Or</p>
+      <label for="username">Username</label>
+      <input id="username" type="text" placeholder="Enter a username " />
+      <label for="mail">Email Address</label>
+      <input id="mail" type="email" placeholder="Enter your email" />
+      <label for="password">Password</label>
+      <input id="password" type="text" placeholder="Password" />
+      <!-- <label for="mail">Username or Email</label> -->
+      <input id="confirm_password" type="text" placeholder="Confirm Password" />
+      <div id="act" onclick="signup()">Sign Up</div>
+      <div class="center">
+        <p>
+          Already a member?
+          <a href="./login.html">Sign in</a>
+        </p>
+      </div>
+      <p class="center">
+        By signing up, you agree to the JEFIT Terms of Use and Privacy Policy.
+        We respect and protect your information and privacy.
+      </p>
+    </div>
+  </body>
+</html>
+<script>
+    let arr=JSON.parse(localStorage.getItem("signupArr")) || [];
+function signup(){
+
+let username = document.getElementById("username").value;
+let mail = document.getElementById("mail").value;
+let password = document.getElementById("password").value;
+let confirm_password = document.getElementById("confirm_password").value;
+let obj={
+    username:username,
+    mail:mail,
+    password:password,
+   
+}
+arr.push(obj);
+localStorage.setItem("signupArr",JSON.stringify(arr))
+}
+</script>
